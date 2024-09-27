@@ -1,8 +1,8 @@
 # Comame-Button
 
 ## なにこれ？
-[動くものはこちらから。](https://niltea.github.io/hanarisa-button/)
-ボタンを押すと、[Comameちゃん](https://www.youtube.com/channel/UCurEA8YoqFwimJcAuSHU0MQ)がお話ししてくれます。
+[動くものはこちらから。](https://github.com/ahaaha0725/comame-button/)
+ボタンを押すと、[Comameちゃん](https://www.youtube.com/@mochikomame)がお話ししてくれます。
 
 ## 実装
 ボタンの[data-voice]属性に指定されたファイル名に基づき音声を読み込み、
