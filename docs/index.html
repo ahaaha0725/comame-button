@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=750,user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+	<meta property="og:audio" content="">
+	<meta property="og:site_name"   content="Comameちゃんが喋ってくれるよ">
+	<meta property="og:url"         content="index.html">
+	<meta property="og:title"       content="Comameボタン">
+	<meta property="og:description" content="Comameちゃんが喋ってくれるよ">
+	<meta property="og:image"       content="https://github.com/ahaaha0725/comame-button/icon.png">
+	<meta property="og:image:secure_url"       content="https://github.com/ahaaha0725/comame-button/icon.png">
+	<meta property="og:image:type" content="image/png" /> 
+	<meta property="og:image:width"  content="800">
+	<meta property="og:image:height" content="400">
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+<html lang="ja">
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# undefined: http://ogp.me/ns/undefined#">
+		<title>こんまめ〜</title>
+		<link rel="stylesheet" href="./css/style.css?v=201903-01">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	</head>
+	<body id="g">
+		<script>
+			var isPC = true;
+			(function () { if (navigator.userAgent.toLowerCase().match(/iphone|ipad|android/)) { document.body.classList.add('sp');isPC=false;return; } document.body.classList .add('pc'); })();
+		</script>
+		<!--block body-->    
+		<div id="wrapper">
+			<main class="mainContent">
+				<h1>こんまめ〜</h1>
+				<p class="desc_top"><a href="https://www.youtube.com/@mochikomame" target="_blank">Comameちゃん</a>が喋ってくれるよ。<br>音量には注意してね。</p>
+				<div class="singleButtonWrapper">
+					<div class="button_wrapper" id="singleButtonWrapper"></div>
+					<div class="content">
+						<p><a id="audio_link" href="#">Download</a></p>
+						<p><a href="/comame-button/">一覧に戻る</a></p>
+					</div>
+				</div>
+				<div class="tab_css">
+					<div class="tab_content">
+						<div class="search">
+							<span class="searchbar-icon"><i class="fas fa-search"></i></span>
+							<input type="text" id="searchBar" onkeyup="searchByKeywords()" placeholder="">
+						</div>
+					</div>
+				</div>
+				<div class="multiButtonWrapper">
+
+					<div class="movie_wrapper">
+						<h2 class="movie_title"><a href="https://www.youtube.com/watch?v=3u3x2UCPxOk" target="_blank">2024.09.22【突發歌回】突然の歌枠！BGMにしてね 喜歡的歌曲我來唱！ Karaoke🐭Singing Stream　※日本語と中国語/茸茸鼠</a></h2>
+						<div class="button_wrapper">
+							<div class="button button-play" data-voice="3u3x2UCPxOk-001506">有…聽…到…我…的…聲…音…嗎？</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-003912">啊…眼睛好癢(´･ω･`)</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-011127">呀哈呀哈！</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-012130">肥肥的鳥鼠仔</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-012230">有夠肥呢！我摸一下~</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-013008">蚵仔麵線①</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-013011">蚵仔麵線②</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-014108">有紅包內~~~</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-014518">どういう祭りなんだよおいおい教えろよ～</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-014944">棒哦！</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-014909">Oh No! Here Comes Trouble</div>
+							<div class="button button-play" data-voice="3u3x2UCPxOk-015014">蛤？你是幾歲啦？沒辦法聽我的英文嗎？</div>
+						</div>
+                    </div>
+					
+					<div class="infoWrapper" id="infoWrapper">
+						<p><a href="#" target="_blank" id="fixedLink">このボタンへのリンク</a></p>
+					</div>
+					
+				</div>		  
+			</main>
+			<div class="mainFooter">
+				<div class="credit">
+					<p>音声等の権利は、全て元権利者に帰属します。</p>
+					<p>音声以外の部分については、<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank">CC-BY-NC-SA-4.0</a>に基づき自由にご利用ください。</p>
+					<p>原ソースコードは<a href="https://github.com/niltea/hanarisa-button" target="_blank">こちら</a>。</p>
+					<p>ソースコードは<a href="https://github.com/ahaaha0725/comame-button" target="_blank">こちら</a>。</p>
+					<p>協作者:募集中</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./js/app.js"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function searchByKeywords() {
+    var input = document.getElementById('searchBar');
+    var inputUpper = input.value.toUpperCase();
+    var streams = document.querySelectorAll(".movie_wrapper");
+    if (input.value == "") {
+        showAllButtons()
+    } else {
+        streams.forEach(stream => {
+            items = stream.querySelectorAll(".button-play");
+            var isBlockHide = true;
+            var itemCount = 0;
+            items.forEach(item => {
+                var txtValue = item.innerText;
+                if (txtValue.toUpperCase().indexOf(inputUpper) > -1) {
+                    if (window.screen.width >= 1300) {
+                        if (itemCount % 3 == 0) {
+                            item.style.marginLeft = "0";
+                        } else {
+                            item.style.marginLeft = "2%";
+                        }
+                    }
+                    item.style.display = "";
+                    isBlockHide = false;
+                    itemCount++;
+                } else {
+                    item.style.display = "none";
+                }
+            })
+            if (isBlockHide) {
+                stream.style.display = "none";
+            } else
+                stream.style.display = "";
+        })
+    }
+}
+
+function showAllButtons() {
+    var streams = document.querySelectorAll(".movie_wrapper");
+    streams.forEach(stream => {
+        stream.style.display = "";
+    })
+
+    var items = document.querySelectorAll(".button-play");
+    items.forEach(item => {
+        item.style.marginLeft = "";
+        item.style.display = "";
+    })
+}
+	</script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</html>
