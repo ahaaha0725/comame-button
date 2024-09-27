@@ -1,7 +1,7 @@
 # Comame-Button
 
 ## なにこれ？
-[動くものはこちらから。](https://github.com/ahaaha0725/comame-button/)
+[動くものはこちらから。](https://ahaaha0725.github.io/comame-button/)
 ボタンを押すと、[Comameちゃん](https://www.youtube.com/@mochikomame)がお話ししてくれます。
 
 ## 実装
