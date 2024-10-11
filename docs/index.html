@@ -45,6 +45,9 @@
 							<input type="text" id="searchBar" onkeyup="searchByKeywords()" placeholder="">
 						</div>
 						<div class="radio-container">
+							<input id="tab0" onclick="writeText('tab0')" type="radio" name="subtab">
+								<label for="tab0">總覽
+							</label>
 							<input id="tab1" onclick="writeText('tab1')" type="radio" name="subtab">
 								<label for="tab1">女鬼
 							</label>
@@ -201,6 +204,10 @@
 			//這段給radio label用
 			var label = document.querySelector(`label[for="${btnId}"]`);
 			var butName = label.textContent.trim();
+			//將總覽目標清洗為空
+			if (butName=="總覽") {
+				butName=""
+			}
 
             
 			
