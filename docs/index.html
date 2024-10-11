@@ -44,7 +44,16 @@
 							<span class="searchbar-icon"><i class="fas fa-search"></i></span>
 							<input type="text" id="searchBar" onkeyup="searchByKeywords()" placeholder="">
 						</div>
+						<div class="radio-container">
+							<input id="tab1" onclick="writeText('tab1')" type="radio" name="subtab">
+								<label for="tab1">女鬼
+							</label>
+							<input id="tab2" onclick="writeText('tab2')" type="radio" name="subtab">
+								<label for="tab2">鼠
+							</label>
+						</div>
 					</div>
+
 				</div>
 				<div class="multiButtonWrapper">
 				
@@ -116,57 +125,95 @@
 			</div>
 		</div>
 	</body>
+	<style>
+		.tab_css{display:flex;flex-wrap:wrap;justify-content:center;}
+		.tab_css input{display:none}-->
+		.tab_css label{margin: 0 5px 5px 0; padding: 10px 16px; cursor: pointer; border-radius: 5px; background: #999; color: #fff; opacity: 0.5;}
+		.tab_css input:checked + label, .tab_css label:hover{opacity: 1; font-weight:bold;}
+		.tab_css input:checked + label + .tab_content{display: initial;}
+		.radio-container {
+            display: flex;
+            justify-content: center; /* 垂直居中 */
+            align-items: center;    /* 水平居中 */
+            gap: 10px;              /* 按鈕之間的間距 */
+			padding: 12px;
+        }
+	</style>
 	<script src="./js/app.js"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function searchByKeywords() {
-    var input = document.getElementById('searchBar');
-    var inputUpper = input.value.toUpperCase();
-    var streams = document.querySelectorAll(".movie_wrapper");
-    if (input.value == "") {
-        showAllButtons()
-    } else {
-        streams.forEach(stream => {
-            items = stream.querySelectorAll(".button-play");
-            var isBlockHide = true;
-            var itemCount = 0;
-            items.forEach(item => {
-                var txtValue = item.innerText;
-                if (txtValue.toUpperCase().indexOf(inputUpper) > -1) {
-                    if (window.screen.width >= 1300) {
-                        if (itemCount % 3 == 0) {
-                            item.style.marginLeft = "0";
-                        } else {
-                            item.style.marginLeft = "2%";
-                        }
-                    }
-                    item.style.display = "";
-                    isBlockHide = false;
-                    itemCount++;
-                } else {
-                    item.style.display = "none";
-                }
-            })
-            if (isBlockHide) {
-                stream.style.display = "none";
-            } else
-                stream.style.display = "";
-        })
-    }
-}
+			var input = document.getElementById('searchBar');
+			var inputUpper = input.value.toUpperCase();
+			var streams = document.querySelectorAll(".movie_wrapper");
+			if (input.value == "") {
+				showAllButtons()
+			} else {
+				streams.forEach(stream => {
+					items = stream.querySelectorAll(".button-play");
+					var isBlockHide = true;
+					var itemCount = 0;
+					items.forEach(item => {
+						var txtValue = item.innerText;
+						if (txtValue.toUpperCase().indexOf(inputUpper) > -1) {
+							if (window.screen.width >= 1300) {
+								if (itemCount % 3 == 0) {
+									item.style.marginLeft = "0";
+								} else {
+									item.style.marginLeft = "2%";
+								}
+							}
+							item.style.display = "";
+							isBlockHide = false;
+							itemCount++;
+						} else {
+							item.style.display = "none";
+						}
+					})
+					if (isBlockHide) {
+						stream.style.display = "none";
+					} else
+						stream.style.display = "";
+				})
+			}
+		}
 
-function showAllButtons() {
-    var streams = document.querySelectorAll(".movie_wrapper");
-    streams.forEach(stream => {
-        stream.style.display = "";
-    })
+		function showAllButtons() {
+			var streams = document.querySelectorAll(".movie_wrapper");
+			streams.forEach(stream => {
+				stream.style.display = "";
+			})
 
-    var items = document.querySelectorAll(".button-play");
-    items.forEach(item => {
-        item.style.marginLeft = "";
-        item.style.display = "";
-    })
-}
+			var items = document.querySelectorAll(".button-play");
+			items.forEach(item => {
+				item.style.marginLeft = "";
+				item.style.display = "";
+			})
+		}
+
+		// 定義函數
+		function writeText(btnId) {
+            // 獲取文本欄位元素
+            let textField = document.getElementById("searchBar");
+			
+			//這段是給BUTTON用的
+			//var butName = document.getElementById(btnId).innerText;
+			//這段給radio label用
+			var label = document.querySelector(`label[for="${btnId}"]`);
+			var butName = label.textContent.trim();
+
+            
+			
+            textField.value = butName;
+			// 創建一個 keyup 事件
+			const event = new Event('keyup', {
+                    bubbles: true,
+                    cancelable: true
+                });
+
+                // 分派事件
+                searchBar.dispatchEvent(event);
+        }
 	</script>
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </html>
